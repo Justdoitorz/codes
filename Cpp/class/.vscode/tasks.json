@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": 
+    [
+        {
+            "label": "debug",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-std=c++11", "-g", "-o", "${fileBasenameNoExtension}", "${file}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-std=c++11", "-o", "${fileBasenameNoExtension}", "${file}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
+            "label": "all",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-std=c++11", "-o", "a.exe", "*.cpp"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
